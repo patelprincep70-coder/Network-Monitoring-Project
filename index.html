@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Network Monitoring System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Network Monitoring System</h1>
+      <p>Device availability and response-time dashboard</p>
+    </div>
+    <button id="monitorAllBtn">Monitor All</button>
+  </header>
+
+  <main>
+    <section class="cards">
+      <div class="card"><span>Total Devices</span><strong id="total">0</strong></div>
+      <div class="card"><span>Online</span><strong id="online">0</strong></div>
+      <div class="card"><span>Offline</span><strong id="offline">0</strong></div>
+    </section>
+
+    <section class="panel">
+      <h2>Add Network Device</h2>
+      <form id="deviceForm">
+        <input id="name" type="text" placeholder="Device name (e.g. Router)" required>
+        <input id="ip" type="text" placeholder="IPv4 address (e.g. 192.168.1.1)" required>
+        <button type="submit">Add Device</button>
+      </form>
+      <p id="message"></p>
+    </section>
+
+    <section class="panel">
+      <div class="table-title">
+        <h2>Monitored Devices</h2>
+        <button class="secondary" id="refreshBtn">Refresh</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Device</th>
+              <th>IP Address</th>
+              <th>Status</th>
+              <th>Response Time</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="deviceTable"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>B.Tech CSE-CS Mini Project • Network Monitoring System</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
